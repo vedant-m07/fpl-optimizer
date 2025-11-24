@@ -280,13 +280,13 @@ def main():
         The math optimizes for **ROI**. 
         Expensive starts like Haaland (£15.0m) often have a lower "Points Per Million" than mid-priced players like Mbeumo or Wood. The algorithm sees £15.0m as "expensive points" and might prefer spreading that cash across 3 good players.
         
-        **Solution:** If you want the superstars for their Captaincy potential or FOMO, simply use the **Lock Players** tool in the sidebar to force them into the Starting XI. The math will then optimize the rest of the squad around them.
-
-        **Upcoming:** Captaincy candidates and potential, also incorporating betting odds for fixture analysis (maybe from predictive markets like Polymarket/Kalshi)
+        **Solution:** If you want the superstars for their Captaincy potential or FOMO, simply use the **Lock Players** tool in the sidebar to force them into the Starting XI. The math will then optimize the rest of the squad around them. FYI, this feature will be the next to be implemented.
+        """)
 
 if __name__ == "__main__":
 
     main()
+
 
 
 
