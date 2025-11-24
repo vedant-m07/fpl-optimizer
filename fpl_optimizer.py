@@ -167,7 +167,7 @@ def solve_squad(df, budget, force_spend=False, locked_ids=None):
 # 4. UI LAYER
 # ==========================================
 def main():
-    st.set_page_config(page_title="Antigravity FPL", layout="wide")
+    st.set_page_config(page_title="Ressu FPL", layout="wide")
     st.title("Ressu FPL Ultimate Squad Generator")
     
     # Load Data Early for Sidebar
@@ -285,4 +285,5 @@ def main():
         """)
 
 if __name__ == "__main__":
+
     main()
