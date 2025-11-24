@@ -173,7 +173,7 @@ def main():
         budget = st.number_input("Bank Budget (£m)", 80.0, 120.0, 100.0, 0.1)
         
         st.divider()
-        st.subheader("🔒 Lock Players")
+        st.subheader("Lock Players")
         st.caption("Force specific players into the **Starting XI**. The solver will build around them.")
         
         # Player Selector
@@ -228,7 +228,7 @@ def main():
             cols = ['full_name', 'team_name', 'pos_name', 'now_cost', 'final_xp']
             
             with col1:
-                st.subheader("🚀 Starting XI")
+                st.subheader("Starting XI")
                 st.dataframe(
                     starters.sort_values('pos_name', key=lambda x: x.map({'GK':0,'DEF':1,'MID':2,'FWD':3}))[cols],
                     hide_index=True, use_container_width=True
@@ -236,7 +236,7 @@ def main():
                 st.metric("Projected Points", round(starters.final_xp.sum(), 1))
                 
             with col2:
-                st.subheader("🪑 Bench")
+                st.subheader("Bench")
                 st.dataframe(
                     bench.sort_values('pos_name', key=lambda x: x.map({'GK':0,'DEF':1,'MID':2,'FWD':3}))[cols],
                     hide_index=True, use_container_width=True
@@ -288,6 +288,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
