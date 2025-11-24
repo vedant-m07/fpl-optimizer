@@ -3,9 +3,7 @@ import pandas as pd
 import requests
 import pulp
 
-# ==========================================
-# 1. DATA INGESTION LAYER
-# ==========================================
+# DATA INGESTION
 @st.cache_data(ttl=300) 
 def get_live_data():
     url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
@@ -43,9 +41,7 @@ def get_live_data():
     
     return elements
 
-# ==========================================
-# 2. METRICS ENGINE
-# ==========================================
+# METRICS & CALCULATIONS ENGINE
 def calculate_xp(df):
     # Base xP
     df['base_xp'] = (df['form'] * 0.6) + (df['points_per_game'] * 0.4)
@@ -63,9 +59,7 @@ def calculate_xp(df):
     
     return df
 
-# ==========================================
-# 3. THE SOLVER
-# ==========================================
+# SOLVER
 def solve_squad(df, budget, force_spend=False, locked_ids=None):
     if locked_ids is None:
         locked_ids = []
@@ -163,9 +157,7 @@ def solve_squad(df, budget, force_spend=False, locked_ids=None):
             
     return squad
 
-# ==========================================
-# 4. UI LAYER
-# ==========================================
+# UI LAYER
 def main():
     st.set_page_config(page_title="Ressu FPL", layout="wide")
     st.title("Ressu FPL Ultimate Squad Generator")
@@ -293,6 +285,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
