@@ -255,7 +255,8 @@ def main():
         ### The Algorithm: Partitioned Knapsack Problem
         This tool uses **Linear Programming** (Simplex Method) to find the mathematically optimal combination of 15 players that maximizes expected points within your constraints.
         
-        All data taken from FPL API (so data is live, and updated ASAP) 
+        All data taken from FPL API (so data is live, and updated ASAP). This is the API used:
+        https://fantasy.premierleague.com/api/bootstrap-static/
 
         **The Constraints:**
         * **Budget:** Must be within your exact bank limit. You can change this in Manager Settings
@@ -285,6 +286,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
