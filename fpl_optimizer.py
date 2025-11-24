@@ -272,14 +272,16 @@ def main():
         * **Considerations:** Accounts for all relevant FPL Rules & Considerations like max players per team, squad value inflation during the season, etc.
         
         **The Metrics:**
-        * **Base xP:** A blend of recent Form (60%) and season-long Points Per Game (40%).
-        * **DefCon (Defensive Contribution):** A bonus applied to **Defenders and Goalkeepers** who have high 'Influence' stats, simulating the new 2025/26 defensive points rule (Tackles/Blocks).
-        * **Rotation Risks:** A dampening factor applied to players who don't play 90 minutes, simulating the new 2025/26 rotation risk rule.
+        * **Base xP:** A mix of recent Form (60%) and season-long Points Per Game (40%).
+        * **Defensive Contribution:** A bonus applied to **Defenders and Goalkeepers** who have high 'Influence' stats, simulating the new 2025/26 defensive points rule (Tackles/Blocks).
+        * **ICT:** Accounts for influence, creativity and threat
+        * **Rotation Risks:** A rotation coefficient factor applied to players who don't play 90 minutes, reducing rotation risks.
         * **Projection Duration:** Squad optimized for upcoming 5 gameweeks in order to minimize wildcarding and excess transfers.
+        * **Fixture Difficulty:** The ease/difficulty of a players fixtures is also accounted for in the ultimate squad selection.
 
         ### Why isn't Haaland/Salah in my team?
-        The math optimizes for **ROI (Return on Investment)**. 
-        Expensive superstars like Haaland (£15.0m) often have a lower "Points Per Million" than mid-priced players like Mbeumo or Wood. The algorithm sees £15.0m as "expensive points" and might prefer spreading that cash across 3 good players.
+        The math optimizes for **ROI**. 
+        Expensive starts like Haaland (£15.0m) often have a lower "Points Per Million" than mid-priced players like Mbeumo or Wood. The algorithm sees £15.0m as "expensive points" and might prefer spreading that cash across 3 good players.
         
         **Solution:** If you want the superstars for their Captaincy potential or FOMO, simply use the **Lock Players** tool in the sidebar to force them into the Starting XI. The math will then optimize the rest of the squad around them. FYI, this feature will be the next to be implemented.
         """)
@@ -287,3 +289,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
