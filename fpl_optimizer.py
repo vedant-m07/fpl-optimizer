@@ -266,18 +266,20 @@ def main():
         All data taken from FPL API (so data is live, and updated ASAP) 
 
         **The Constraints:**
-        * **Budget:** Must be within your exact bank limit.
+        * **Budget:** Must be within your exact bank limit. You can change this in Manager Settings
         * **Structure:** Exactly 11 Starters and 4 Bench players.
-        * **Valid Formations:** Must pick a real formation (e.g., 3-5-2, 4-4-2, 3-4-3).
-        * **Considerations:** Accounts for all relevant FPL Rules & Considerations like max players per team, squad value inflation during the season, etc.
+        * **Valid Formations:** Squads are made to complement only the valid formations based on FPL rules.
+        * **Other Considerations:** Accounts for all relevant FPL Rules & Considerations like max players per team, squad value inflation during the season, etc.
         
         **The Metrics:**
         * **Base xP:** A mix of recent Form (60%) and season-long Points Per Game (40%).
-        * **Defensive Contribution:** A bonus applied to **Defenders and Goalkeepers** who have high 'Influence' stats, simulating the new 2025/26 defensive points rule (Tackles/Blocks).
+        * **Defensive Contribution:** A bonus applied to **Defenders and Goalkeepers** who have high 'Influence' stats, taking advantage of the new 2025/26 defensive points rule (Tackles/Blocks).
         * **ICT:** Accounts for influence, creativity and threat
         * **Rotation Risks:** A rotation coefficient factor applied to players who don't play 90 minutes, reducing rotation risks.
         * **Projection Duration:** Squad optimized for upcoming 5 gameweeks in order to minimize wildcarding and excess transfers.
         * **Fixture Difficulty:** The ease/difficulty of a players fixtures is also accounted for in the ultimate squad selection.
+        * **Injury/Availibility:** The likelihood of a player playing is between 0 and 1, and affects the players chance of getting selected.
+        * **Bench Emphasis:** Bench players have a lower weightage given to them, optimizing for the starting lineup and only taking cheaper players for the bench.
 
         ### Why isn't Haaland/Salah in my team?
         The math optimizes for **ROI**. 
@@ -289,4 +291,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
