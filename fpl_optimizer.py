@@ -281,6 +281,8 @@ def main():
         * **Injury/Availibility:** The likelihood of a player playing is between 0 and 1, and affects the players chance of getting selected.
         * **Bench Emphasis:** Bench players have a lower weightage given to them, optimizing for the starting lineup and only taking cheaper players for the bench.
 
+        * **All the above metrics are used to calculate the xP (Expected Points) of a player. Then under budget constraints and abiding by all FPL rules, we generate the most optimal squad, taking the next 5 gameweeks into consideration!**
+
         ### Why isn't Haaland/Salah in my team?
         The math optimizes for **ROI**. 
         Expensive starts like Haaland (£15.0m) often have a lower "Points Per Million" than mid-priced players like Mbeumo or Wood. The algorithm sees £15.0m as "expensive points" and might prefer spreading that cash across 3 good players.
@@ -291,5 +293,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
